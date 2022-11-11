@@ -21,7 +21,7 @@ This is an application I am building with the hope of tracking future projects, 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Blog Site: [Add solution URL here](https://www.travcodez.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -38,6 +38,8 @@ This is an application I am building with the hope of tracking future projects, 
 - [TailwindCSS](https://tailwindcss.com/) - For styles
 - [Prisma](https://www.prisma.io/) - For Database Management
 - [Postgresql](https://www.postgresql.org/) - For Database
+- [Jest](https://jestjs.io/) - For Testing
+
 
 ### What I learned
 
