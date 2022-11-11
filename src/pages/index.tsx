@@ -5,7 +5,7 @@ import { trpc } from "../utils/trpc";
 const Home: NextPage = () => {
   const { status, data: session, } = useSession();
   if (status === "loading") {
-    return <main>Loading...</main>;
+    return <main><h1>Loading...</h1></main>;
   }
   return (
     <>
