@@ -10,8 +10,13 @@ const Home: NextPage = () => {
   return (
     <>
       <main>{
-        session?.user ? (<><h1>{session.user.name}</h1><button onClick={() => signOut()}>Sign Out</button></>) : <><h1>Hello Next</h1>
-          <button onClick={() => signIn()}>Sign In With Discord</button></>
+        session?.user ? (<><h1>{session.user.name}</h1><button onClick={() => signOut()}>Sign Out</button></>) : 
+        <>
+        <h1>Hello Next</h1>
+          <button onClick={() => signIn()}>Sign In</button>
+
+          
+          </>
       }
 
       </main>
