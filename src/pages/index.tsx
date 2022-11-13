@@ -24,7 +24,6 @@ const Home: NextPage = () => {
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   const session = await getServerAuthSession(ctx);
-
   if (!session) {
     return {
       redirect: {
@@ -39,4 +38,5 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     },
   };
 };
+
 export default Home;
