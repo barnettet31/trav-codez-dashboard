@@ -1,6 +1,7 @@
 # TravCodez - Task Management Tracking App
 
-This is an application I am building with the hope of tracking future projects, bugs for old projects, and potentially a showcase of my skills as a javascript developer. 
+This is an application I am building with the hope of tracking future projects, bugs for old projects, and potentially a showcase of my skills as a javascript developer.
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -13,11 +14,7 @@ This is an application I am building with the hope of tracking future projects, 
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-
-
 ## Overview
-
-
 
 ### Links
 
@@ -38,30 +35,15 @@ This is an application I am building with the hope of tracking future projects, 
 - [TailwindCSS](https://tailwindcss.com/) - For styles
 - [Prisma](https://www.prisma.io/) - For Database Management
 - [Postgresql](https://www.postgresql.org/) - For Database
-- [Jest](https://jestjs.io/) - For Testing
-
+- [Cypress](https://www.cypress.io/) - For testing
 
 ### What I learned
 
-
-
 ### Continued development
 
-
-
-
-
 ### Useful resources
-
-
-
-
 
 ## Author
 
 - Website - [Travis Barnette](https://www.travcodez.com)
 - LinkedIn - [@barnettet31](https://www.linkedin.com/in/barnettetravis31/)
-
-
-
-
