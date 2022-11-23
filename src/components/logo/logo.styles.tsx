@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority";
 export type SVGLogoVariantProps = VariantProps<typeof svgLogoVariants>;
 export const svgLogoVariants = cva(
-  ["mx-auto", "w-auto", "text-gray-600", "dark:text-gray-300"],
+  ["w-auto", "text-gray-600", "dark:text-gray-300"],
   {
     variants: {
       intent: {
