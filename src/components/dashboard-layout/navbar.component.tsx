@@ -14,14 +14,16 @@ import {
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { signOut } from "next-auth/react";
 import { Logo } from "../logo/logo.component";
+import Link from "next/link";
+import { classNames } from "../../utils/classNames";
+import { NavBarLink } from "./navbarLink.component";
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Documents", href: "#", icon: InboxIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartBarIcon, current: false },
+  { name: "Dashboard", href: "/", icon: HomeIcon },
+  { name: "Projects", href: "/projects", icon: FolderIcon },
+  { name: "Calendar", href: "#", icon: CalendarIcon },
+  { name: "Documents", href: "#", icon: InboxIcon },
+  { name: "Reports", href: "#", icon: ChartBarIcon },
 ];
 const userNavigation = [
   {
@@ -44,9 +46,6 @@ const userNavigation = [
   },
 ];
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 interface IProps {
   children: React.ReactNode;
 }
@@ -112,7 +111,7 @@ export default function NavBar({ children }: IProps) {
                 <div className="mt-5 h-0 flex-1 overflow-y-auto">
                   <nav className="space-y-1 px-2">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -132,7 +131,7 @@ export default function NavBar({ children }: IProps) {
                           aria-hidden="true"
                         />
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
@@ -153,27 +152,7 @@ export default function NavBar({ children }: IProps) {
           <div className="flex flex-1 flex-col overflow-y-auto">
             <nav className="flex-1 space-y-1 px-2 py-4">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "group flex items-center rounded-md px-2 py-2 text-sm font-medium"
-                  )}
-                >
-                  <item.icon
-                    className={classNames(
-                      item.current
-                        ? "text-gray-300"
-                        : "text-gray-400 group-hover:text-gray-300",
-                      "mr-3 h-6 w-6 flex-shrink-0"
-                    )}
-                    aria-hidden="true"
-                  />
-                  {item.name}
-                </a>
+                <NavBarLink item={item} />
               ))}
             </nav>
           </div>
