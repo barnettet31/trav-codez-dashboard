@@ -6,7 +6,7 @@ import { trpc } from "../utils/trpc";
 const Home: NextPage = () => {
   const { data: user, isLoading } = trpc.user.me.useQuery();
   if (isLoading) return <div>Loading....</div>;
-  if (user !== "ADMIN")
+  if (user?.role !== "ADMIN")
     return (
       <div>
         <p>I don't know how to tell you this but you're not an admin</p>
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   return (
     <main className="flex flex-col items-center">
-      <h1>This is my landing page for my admin</h1>
+      <h1>This is my landing page for my admin {user.name}</h1>
       <button onClick={() => signOut()}> You can sign out now</button>
     </main>
   );
