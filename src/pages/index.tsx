@@ -1,5 +1,5 @@
 import { GetServerSidePropsContext, type NextPage } from "next";
-import { signIn, signOut } from "next-auth/react";
+import { signOut } from "next-auth/react";
 import { getServerAuthSession } from "../server/common/get-server-auth-session";
 import { trpc } from "../utils/trpc";
 
