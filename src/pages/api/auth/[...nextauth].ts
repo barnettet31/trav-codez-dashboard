@@ -24,15 +24,18 @@ export const authOptions: NextAuthOptions = {
     DiscordProvider({
       clientId: env.DISCORD_CLIENT_ID,
       clientSecret: env.DISCORD_CLIENT_SECRET,
+      allowDangerousEmailAccountLinking: true,
     }),
-   GoogleProvider({
-    clientId:env.GOOGLE_CLIENT_ID,
-    clientSecret:env.GOOGLE_CLIENT_SECRET
-   }),
-   GitHubProvider({
-    clientId:env.GITHUB_CLIENT_ID,
-    clientSecret:env.GITHHUB_CLIENT_SECRET
-   })
+    GoogleProvider({
+      clientId: env.GOOGLE_CLIENT_ID,
+      clientSecret: env.GOOGLE_CLIENT_SECRET,
+      allowDangerousEmailAccountLinking: true,
+    }),
+    GitHubProvider({
+      clientId: env.GITHUB_CLIENT_ID,
+      clientSecret: env.GITHHUB_CLIENT_SECRET,
+      allowDangerousEmailAccountLinking: true,
+    }),
     // ...add more providers here
   ],
 };
